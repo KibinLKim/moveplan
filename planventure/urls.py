@@ -19,5 +19,12 @@ import hello.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('about/', hello.views.about, name='about'),
+    path('contact/', hello.views.contact, name='contact'),
+    path('faq/', hello.views.faq, name='faq'),
+    path('features/', hello.views.features, name='features'),
     path('', hello.views.index, name='index'),
+    path('login/', hello.views.login, name='login'),
+    path('portfolio/', hello.views.portfolio, name='portfolio'),
+    path('registration/', hello.views.registration, name='registration'),
 ]
