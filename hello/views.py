@@ -18,16 +18,15 @@ def features(request):
 def index(request):
     return render(request,'index.html')
 
-def login(request):
-    return render(request,'login.html')
-
 def portfolio(request):
     return render(request,'portfolio.html')
 
-def registration(request):
-    return render(request,'registration.html')
+def signin(request):
+    return render(request,'signin.html')
 
-    
+def signup(request):
+    return render(request,'signup.html')
+
 def ExpectedRevenue(request):
   ThreeMonthCost = request.GET['ThreeMonthCost']
   YearPerformance = request.GET['YearPerformance']
@@ -45,4 +44,3 @@ def PrivacyPension(request):
   MonthCompound = request.GET['MonthCompound']
   PrivacyPensionResult = int(InvestmentPay)*int(PensionRateReturn)
   return render(request, '', {'InvestmenPay':InvestmentPay, 'PensionRateReturn': PensionRateReturn,'MonthCompound':MonthCompound,'PrivacyPensionResult':PrivacyPensionResult})
-

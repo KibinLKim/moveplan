@@ -1,10 +1,5 @@
 @charset "UTF-8";
-/*!
-* Bootstrap v3.3.7 (http://getbootstrap.com)
-* Copyright 2011-2016 Twitter, Inc.
-* Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-*/
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
@@ -13,6 +8,7 @@ html {
 body {
 	margin: 0;
 }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
 	display: block;
 }
@@ -1057,9 +1053,11 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
 .img-rounded {
 	border-radius: 6px;
 }
+
 .img-thumbnail {
 	padding: 4px;
 	line-height: 1.428571429;
@@ -6436,6 +6434,15 @@ body #process .process-border {
 	top: 29%;
 }
 }
+
+body #header {
+	background: url(../img/index/1/2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+}
+
 body #testimonial {
 	background: url(../img/bg2.jpg);
 	width: 100%;

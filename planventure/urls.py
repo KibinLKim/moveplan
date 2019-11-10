@@ -24,7 +24,7 @@ urlpatterns = [
     path('faq/', hello.views.faq, name='faq'),
     path('features/', hello.views.features, name='features'),
     path('', hello.views.index, name='index'),
-    path('login/', hello.views.login, name='login'),
     path('portfolio/', hello.views.portfolio, name='portfolio'),
-    path('registration/', hello.views.registration, name='registration'),
+    path('signin/', hello.views.signin, name='signin'),
+    path('signup/', hello.views.signup, name='signup'),
 ]
