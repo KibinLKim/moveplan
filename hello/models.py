@@ -11,44 +11,39 @@ class RetireCalculate(models.Model):
     YearPerformance = models.IntegerField()
     YearAllowance = models.IntegerField()
     WorkDays = models.IntegerField()
-    RetireExpected = models.CharField(max_length=255, default='example')
+    RetireExpected = models.CharField(max_length=255, default='example') 
 
-    #계산 및 데이터 베이스 저장
-    def ExpectedRevenue(self):
-        self.RetireExpected = ''
-        Revenue = (self.ThreeMonthCost+self.YearPerformance*3/12 + self.YearAllowance*3/12)
-        Revenue2 = Revenue/90*30*(self.Workdays/365)
-        self.RetireExpected = str(Revenue2)
-        
-        self.save()
+    # 계산 및 데이터 베이스 저장
+ 
 
 
+class PrivacyPension(models.Model):
+    PensionCategory =(
+        ('P1','연금보험'),
+        ('P2','변액연금보험'),
+        ('P3','연금저축보험'),
+    )
+    PensionCategoryChoices = models.CharField(max_length=60, choices = PensionCategory,default=0)
+    InvestmentPay = models.CharField(max_length = 100)
+    PensionRateReturn = models.CharField(max_length=100)
+    MonthCompound = models.CharField(max_length = 100)
 
-# class PrivacyPension(models.Model):
-#     PensionCategory =(
-#         ('P1','연금보험'),
-#         ('P2','변액연금보험'),
-#         ('P3','연금저축보험'),
-#     )
+
+class ShowPensionDC(models.Model):
+    Investment = (
+        ('i1','10'),
+        ('i2','15'),
+        ('i3','20'),
+    )
+    YearDC = (
+        ('y1','10'),
+        ('y2','15'),
+        ('y3','20'),
+    )
+    InvestmentChoices = models.CharField(max_length=60, choices = Investment, default = 0)
+    YearDCChoices = models.CharField(max_length=60, choices = YearDC, default = 0)
+    RateReturnDC = models.CharField(max_length = 100)
     
-#     PensionRateReturn = models.CharField(max_length=100)
-#     MonthCompound = models.CharField(max_length = 100)
-
-
-# class ShowPensionDC(models.Model):
-#     investment = (
-#         ('i1','10'),
-#         ('i2','15'),
-#         ('i3','20'),
-#     )
-#     YearDC = (
-#         ('y1','10'),
-#         ('y2','15'),
-#         ('y3','20'),
-#     )
-#     RateReturnDC = models.CharField(max_length = 100)
-    
-#     #get_필드명_display()
-# class ChoicePension(models.Model):
-#     WantYear = models.CharField(max_length = 100)
-#     AllPensionResult = 
+    #get_필드명_display()
+class ChoicePension(models.Model):
+    WantYear = models.CharField(max_length = 100)
