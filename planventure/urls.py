@@ -20,11 +20,10 @@ import hello.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', hello.views.about, name='about'),
-    path('contact/', hello.views.contact, name='contact'),
-    path('faq/', hello.views.faq, name='faq'),
-    path('features/', hello.views.features, name='features'),
+    path('funding/', hello.views.funding, name='funding'),
+    path('history/', hello.views.history, name='history'),
     path('', hello.views.index, name='index'),
-    path('portfolio/', hello.views.portfolio, name='portfolio'),
+    path('management/', hello.views.management, name='management'),
     path('signin/', hello.views.signin, name='signin'),
     path('signup/', hello.views.signup, name='signup'),
 ]

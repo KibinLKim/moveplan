@@ -6435,12 +6435,28 @@ body #process .process-border {
 }
 }
 
-body #header {
-	background: url(../img/index/1/2.jpg);
+body #index-page-section1 {
+	background: url(../img/index/1/5.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center;
-	height: 100%;
+	text-align: center;
+	padding-left: 70rem;
+	/* background-position: center; */
+}
+
+body #index-page-section1 .index-page-section1-contents-1 {
+	font-size: 5rem;
+	color: white;
+}
+
+body #index-page-section1 .index-page-section1-contents-2 {
+	font-size: 3rem;
+	color: white;
+}
+
+body #index-page-section1 .index-page-section1-contents-3 {
+	font-size: 2rem;
+	color: white;
 }
 
 body #testimonial {

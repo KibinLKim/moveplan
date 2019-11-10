@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>무브플랜</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'scss/main.css' %}">
@@ -35,12 +35,10 @@
                     
                     <div id="navbar" class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">펀딩하기</a></li>
-                            <li><a href="{% url 'features' %}">퇴직관리</a></li>
-                            <li><a href="{% url 'about' %}">펀딩내역</a></li>
-                            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
-                            <li><a href="{% url 'faq' %}">FAQ</a></li>
-                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                            <li><a href="{% url 'funding' %}">펀딩하기</a></li>
+                            <li><a href="{% url 'management' %}">퇴직관리</a></li>
+                            <li><a href="{% url 'history' %}">펀딩내역</a></li>
+                            <li><a href="{% url 'about' %}">회사소개</a></li>
                             <li><a href="{% url 'signin' %}">로그인</a></li>
                             <li><a href="{% url 'signup' %}">회원가입</a></li>
                         </ul>
@@ -52,30 +50,31 @@
     </header>
     <!--/.nav-ends -->
 
-    <section id="header" class="jumbotron text-center">
-            <h1 class="display-3">PATTERN</h1>
-            <p class="lead">Lorem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor siolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor siolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum doloret consem ipsum dolor siolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor siolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum doloret consem ipsum dolor siolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor siolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, pariatur?</p>
-            <a href="" class="btn btn-primary">Do Something</a>
-            <a href="" class="btn btn-success">Another Thing</a>
-        </section>
+    <section id="index-page-section1" class="jumbotron text-center">
+        <p><br /><br /><br /><br /></p>
+        <p class="index-page-section1-contents-1">당신의 은퇴를 위한 준비</p><br /><br />
+        <p class="index-page-section1-contents-2">MOVEPLAN과 함께하세요</p><br /><br />
+        <p class="index-page-section1-contents-3">나만의 퇴직관리<br />C2B 역경매 플랫폼</p><br /><br />
+        <a href="" class="btn btn-primary">서비스 시작하기</a><br /><br /><br />
+    </section>
 
     <section id="about-page-section-3">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7 text-align">
                     <div class="section-heading">
-                        <h2>About <span>Us</span></h2>
-                        <p class="subheading">Lorem ipsum send do tempor consectetur ipsum send do tempor.</p>
+                        <h2>MOVEPLAN은 당신의 커리어를 책임집니다.</h2>
                     </div>
                     <p>
-                        Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura. Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consec tetuer adipis elit, aliquam eget nibh
-                        etlibura. Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura.
-
-                        <br><br> Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consec tetuer adipis elit, aliquam eget nibh etlibura. Aenean commodo ligula eget dolor. Aenean massa. Lorem ipsum dolor sit amet, consec tetuer
-                        adipis elit, aliquam eget nibh etlibura.
-
+                        국민연금
+                        <br /><br /> 국민연금의 의무화로 인해 얼마를 납입하고 계신지 상환금액이 얼마인지 알려드립니다.
+                        <br /><br />
+                        퇴직연금
+                        <br /><br /> 가입되어 계신 퇴직연금들을 정리해드립니다. 퇴직과 이직시기, 일시금과 연금 선택 모두 고려해보세요.
+                        <br /><br />
+                        개인연금
+                        <br /><br /> 변액보험상품과 같이 다양한 연금상품에 대한 정보를 알려드립니다. 어떤 상품에 가입되어 계신지 확인해보세요.
                     </p>
-                    <button type="button" class="btn btn-primary slide">Learn More <i class="fa fa-caret-right"></i></button>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
                     <img id="index-img" height="" width="auto" src="{% static 'img/index/2/phone.png' %}" class="attachment-full img-responsive" alt="">
@@ -132,78 +131,58 @@
         </div>
 
         <!-- Left and right controls -->
-
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <i class="fa fa-angle-left" aria-hidden="true"></i>
             <span class="sr-only">Previous</span>
         </a>
         <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <i class="fa fa-angle-right" aria-hidden="true"></i>
             <span class="sr-only">Next</span>
         </a>
-
     </div>
 
-    <section id="testimonial">
-        <div class="container">
-            <div class="section-heading text-center">
-                <div class="col-md-12 col-xs-12">
-                    <h1>What Our <span>Client Says</span></h1>
-                    <p class="subheading">Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset nam nostrud euismod volumus ne mei.</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 col-sm-12 block ">
-                    <div class="testimonial_box">
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset. </p>
+    <section id="features-page">
+        <div class="subsection3" style=" overflow-x:hidden;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12 left-section">
+                        <div class="subfeature">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h1>펀드의 <span>대형화</span>와 <span>장기적인 특성</span>을 이용하여 <span>안정성</span>과 <span>수익성</span>을 동시에 얻고 있습니다.</h1>
+                            </div>
+                        </div>
                     </div>
-                    <div class="arrow-down"></div>
-                    <div class="testimonial_user">
-                        <div class="user-image"><img src="{% static 'img/user1.png' %}" alt="user" class="img-responsive" /></div>
-                        <div class="user-info">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Manager</p>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12 right-section right-background">
+                        <div class="subfeature">
+                            <div class="featureblock">
+                                <div class="col-md-2 col-xs-2 icon"><i class="fa fa-laptop feature_icon"></i></div>
+                                <div class="col-md-10 col-xs-10">
+                                    <h4>카카오 행복연금 수익률 8.7%</h4>
+                                </div>
+                            </div>
+                            <div class="featureblock">
+                                <div class="col-md-2 col-xs-2 icon"><i class="fa fa-bullhorn feature_icon"></i></div>
+                                <div class="col-md-10 col-xs-10">
+                                    <h4>미래에셋 공격형 수익률 10%</h4>
+                                </div>
+                            </div>
+                            <div class="featureblock">
+                                <div class="col-md-2 col-xs-2 icon"><i class="fa fa-bullhorn feature_icon"></i></div>
+                                <div class="col-md-10 col-xs-10">
+                                    <h4>삼성생명 안정형 수익률 10%</h4>
+                                </div>
+                            </div>
+                            <div class="featureblock nomargin">
+                                <div class="col-md-2 col-xs-2 icon"><i class="fa fa-support feature_icon"></i></div>
+                                <div class="col-md-10 col-xs-10">
+                                    <h4>메리츠 안정연금 수익률 5.7%</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-                <div class="col-md-4 col-sm-12 block">
-                    <div class="testimonial_box">
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset. </p>
-                    </div>
-                    <div class="arrow-down"></div>
-                    <div class="testimonial_user">
-                        <div class="user-image"><img src="{% static 'img/user1.png' %}" alt="user" class="img-responsive" /></div>
-                        <div class="user-info">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Manager</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-12 block">
-                    <div class="testimonial_box">
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset. </p>
-                    </div>
-                    <div class="arrow-down"></div>
-                    <div class="testimonial_user">
-                        <div class="user-image"><img src="{% static 'img/user1.png' %}" alt="user" class="img-responsive" /></div>
-                        <div class="user-info">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Manager</p>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </div>
-
     </section>
-
-
-
-
 
     <section id="footer">
         <div class="container">
@@ -268,8 +247,6 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
     <section id="bottom-footer">

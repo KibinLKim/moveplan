@@ -5,21 +5,18 @@ from django.shortcuts import render
 def about(request):
     return render(request,'about.html')
 
-def contact(request):
-    return render(request,'contact.html')
+def funding(request):
+    return render(request,'funding.html')
 
-def faq(request):
-    return render(request,'faq.html')
-
-def features(request):
-    return render(request,'features.html')
+def history(request):
+    return render(request,'history.html')
 
 # Home
 def index(request):
     return render(request,'index.html')
 
-def portfolio(request):
-    return render(request,'portfolio.html')
+def management(request):
+    return render(request,'management.html')
 
 def signin(request):
     return render(request,'signin.html')
