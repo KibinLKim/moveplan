@@ -47,3 +47,12 @@ class ShowPensionDC(models.Model):
     #get_필드명_display()
 class ChoicePension(models.Model):
     WantYear = models.CharField(max_length = 100)
+
+class RetireSeason(models.Model):
+    OneYear = (
+        ('t1','네')
+        ('t2', '아니오')
+    )
+    OneYearChoice = models.CharField(max_length=60, choices = OneYear)
+    RestTear = models.CharField(max_length = 100)
+    AddMonth = models.CharField(max_length=100)

@@ -41,3 +41,23 @@ def PrivacyPension(request):
   MonthCompound = request.GET['MonthCompound']
   PrivacyPensionResult = int(InvestmentPay)*int(PensionRateReturn)
   return render(request, '', {'InvestmenPay':InvestmentPay, 'PensionRateReturn': PensionRateReturn,'MonthCompound':MonthCompound,'PrivacyPensionResult':PrivacyPensionResult})
+
+
+def ChoicePension(request):
+  WantYear = request.GET['WantYear']
+  RetireExpected = request.GET['RetireExpected']
+  MonthPayment = int(WantYear)*int(RetireExpected)*0.017/int(WantYear)/12
+  return render(request, '',{'WantYear':WantYear, 'RetureExpected':RetireExpected, 'MonthPayment':MonthPayment})
+
+def RetireSeason(request):
+  OneYearChoice = request.GET['OneYearChoice']
+  AddMonth = request.GET['AddMonth']
+  RestDate = request.GET['RestDate']
+  Workdays = request.GET['Workdays']
+  ThreeMonthCost = request.GET['ThreeMonthCost']
+  YearPerformance = request.GET['YearPerformance']
+  YearAllowance = request.GET['YearAllowance']
+  if OneYearChoice == '네':
+    a = int(ThreeMonthCost)*1.1 + int(YearPerformance)*3/12+ int(YearAllowance)*3/12
+    b = a/90*int(Workdays)/365
+  return render(request,'',{'AllPayment':b})
