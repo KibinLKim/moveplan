@@ -24,6 +24,7 @@ import accounts.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', hello.views.about, name='about'),
+    path('detail/', hello.views.detail, name='detail'),
     path('funding/', hello.views.funding, name='funding'),
     path('history/', hello.views.history, name='history'),
     path('', hello.views.index, name='index'),
@@ -31,7 +32,7 @@ urlpatterns = [
 
     #userAccounts
 
-    path('signup/',accounts.views.signup, name='signup'),
-    path('login/',accounts.views.login,name="login"),
-    path('logout/',accounts.views.logout,name="logout"),
+    path('signup/', accounts.views.signup, name='signup'),
+    path('login/', accounts.views.login, name='login'),
+    path('logout/', accounts.views.logout, name='logout'),
 ]

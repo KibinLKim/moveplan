@@ -5,6 +5,9 @@ from django.shortcuts import render
 def about(request):
     return render(request,'about.html')
 
+def detail(request):
+    return render(request, 'detail.html')
+
 def funding(request):
     return render(request,'funding.html')
 
