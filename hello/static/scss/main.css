@@ -6550,6 +6550,7 @@ body #bottom-footer {
 body #bottom-footer .btm-footer-links a {
 	margin-right: 20px;
 	color: #fff;
+	font-size: 1.2rem !important;
 }
 body #bottom-footer .copyright {
 	text-align: right;

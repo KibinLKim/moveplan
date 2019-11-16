@@ -50,8 +50,8 @@ class ChoicePension(models.Model):
 
 class RetireSeason(models.Model):
     OneYear = (
-        ('t1','네')
-        ('t2', '아니오')
+        ('t1','네'),
+        ('t2', '아니오'),
     )
     OneYearChoice = models.CharField(max_length=60, choices = OneYear)
     RestTear = models.CharField(max_length = 100)
