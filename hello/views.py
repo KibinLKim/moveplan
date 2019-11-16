@@ -18,12 +18,6 @@ def index(request):
 def management(request):
     return render(request,'management.html')
 
-def signin(request):
-    return render(request,'signin.html')
-
-def signup(request):
-    return render(request,'signup.html')
-
 def ExpectedRevenue(request):
   ThreeMonthCost = request.GET['ThreeMonthCost']
   YearPerformance = request.GET['YearPerformance']
@@ -61,3 +55,5 @@ def RetireSeason(request):
     a = int(ThreeMonthCost)*1.1 + int(YearPerformance)*3/12+ int(YearAllowance)*3/12
     b = a/90*int(Workdays)/365
   return render(request,'',{'AllPayment':b})
+
+

@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>로그인</title>
+    <title>회원가입</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'scss/main.css' %}">
@@ -39,8 +39,8 @@
                             <li><a href="{% url 'management' %}">퇴직관리</a></li>
                             <li><a href="{% url 'history' %}">펀딩내역</a></li>
                             <li><a href="{% url 'about' %}">회사소개</a></li>
-                            <li class="active"><a href="{% url 'signin' %}">로그인</a></li>
-                            <li><a href="{% url 'signup' %}">회원가입</a></li>
+                            <li><a href="{% url 'login' %}">로그인</a></li>
+                            <li class="active"><a href="{% url 'signup' %}">회원가입</a></li>
                         </ul>
                     </div>
                     <!--/.nav-collapse -->
@@ -58,15 +58,24 @@
         </div>
     </section>
 
+
+
     <section id="login-reg">
         <div class="container">
             <!-- Top content -->
             <div class="row">
                 <div class="col-md-6 col-sm-12 forms-right-icons">
                     <div class="section-heading">
-                        <h2>Sign In With <span>Us</span></h2>
-                        <p class="subheading">Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.
+                        <h2>Sign Up With <span>Us</span></h2>
+                        <p class="subheading">Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset nam nostrud euismod volumus ne mei.
                         </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2 icon"><i class="fa fa-laptop"></i></div>
+                        <div class="col-xs-10 datablock">
+                            <h4>100% Responsive</h4>
+                            <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.</p>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-2 icon"><i class="fa fa-bullhorn"></i></div>
@@ -84,133 +93,126 @@
                     </div>
 
                 </div>
+                <!--forms-right-icons-->
                 <div class="col-md-6 col-sm-12">
-
                     <div class="form-box">
                         <div class="form-top">
                             <div class="form-top-left">
-                                <h3>Login to our site</h3>
-                                <p>Enter username and password to log on:</p>
+                                <h3>Sign up now</h3>
+                                <p>Fill in the form below to get instant access</p>
                             </div>
                             <div class="form-top-right">
-                                <i class="fa fa-key"></i>
+                                <i class="fa fa-pencil"></i>
                             </div>
                         </div>
                         <div class="form-bottom">
                             <form role="form" action="" class="login-form">
                                 <div class="input-group form-group">
                                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-unlock"></i></span>
-                                    <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
                                 </div>
-                                <button type="submit" class="btn">Sign in!</button>
-                            </form>
-                        </div>
-                    </div>
+                                <div class="input-group form-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                                    <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group form-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-phone"></i></span>
+                                    <input type="tel" class="form-control" placeholder="Phone No." aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group form-group">
 
-                    <div class="social-login">
-                        <h3>...or login with:</h3>
-                        <div class="social-login-buttons">
-                            <a class="btn btn-link-1 btn-link-1-facebook" href="#">
-                                <i class="fa fa-facebook"></i> Facebook
-                            </a>
-                            <a class="btn btn-link-1 btn-link-1-twitter" href="#">
-                                <i class="fa fa-twitter"></i> Twitter
-                            </a>
-                            <a class="btn btn-link-1 btn-link-1-google-plus" href="#">
-                                <i class="fa fa-google-plus"></i> Google Plus
-                            </a>
+                                    <textarea rows="4" cols="70" class="form-control" placeholder="Message"></textarea>
+
+                                </div>
+                                <button type="submit" class="btn">Sign me up!</button>
+                            </form>
                         </div>
                     </div>
 
                 </div>
 
+
     </section>
 
+   
     <section id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <h4>Address</h4>
-                        <hr/>
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.
-                        </p>
-                        <a href="#" class="learnmore">Learn More <i class="fa fa-caret-right"></i></a>
+                        <p>대표 : 정현욱</p>
+                        <p>대표전화 : 010-6338-1363</p>
+                        <p>이메일 : hyunwook0506@khu.ac.kr</p>
+                        <p>카카오톡 : Anthony</p>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <h4>Useful Links</h4>
+                        <h4>무브플랜팀</h4>
                         <hr/>
                         <ul class="footer-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">Sign Up</a></li>
+                            <li><a href="#">무브플랜 블로그</a></li>
+                            <li><a href="#">언론 미디어</a></li>
+                            <li><a href="#">채용</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <h4>Community</h4>
+                        <h4>기타 문의</h4>
                         <hr/>
                         <ul class="footer-links">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Free Goods</a></li>
+                            <li><a href="#">비즈니스 제휴</a></li>
+                            <li><a href="#">마케팅 PR</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="col-md-3 col-sm-3 col-xs-12 <block></block>">
                     <div class="footer-block">
-                        <h4>Recent Posts</h4>
+                        <h4>고객센터</h4>
                         <hr/>
                         <ul class="footer-links">
                             <li>
-                                <a href="#" class="post">Lorem ipsum dolor sit amet</a>
-                                <p class="post-date">May 25, 2017</p>
+                                <a href="#">대표 : 정현욱</a>
                             </li>
                             <li>
-                                <a href="#" class="post">Lorem ipsum dolor sit amet</a>
-                                <p class="post-date">May 25, 2017</p>
+                                <a href="#">대표 전화 : 010-6338-1363</a>
                             </li>
                             <li>
-                                <a href="#" class="post">Lorem ipsum dolor sit amet</a>
-                                <p class="post-date">May 25, 2017</p>
+                                <a href="#">이메일: hyunwook0506@khu.ac.kr</a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </section>
 
     <section id="bottom-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 btm-footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
+                    <a href="#">서비스 이용약관</a>
+                    <a href="#">금융정보서비스이용약관</a>
+                    <a href="#">이용자의 권리 및 유의사항</a>
+                    <a href="#">개인정보 처리방침</a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 copyright">
-                    Developed by <a href="#">Aspire Software Solutions</a> designed by <a href="#">Designing Team</a>
+                   <a href="#">©MOVEPLAN. All rights reserved.</a>
                 </div>
-            </div>
+            </div>  
         </div>
     </section>
 
+</html>
+    
 </body>
 
 </html>
