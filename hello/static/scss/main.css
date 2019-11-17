@@ -6437,11 +6437,13 @@ body #process .process-border {
 }
 
 body #index-page-section1 {
+	height: 700px;
 	background: url(../img/index/1/5.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
-	padding-left: 70rem;
+	padding-left: 65rem;
+	margin-bottom: -5px;
 	/* background-position: center; */
 }
 
@@ -6459,6 +6461,11 @@ body #index-page-section1 .index-page-section1-contents-2 {
 body #index-page-section1 .index-page-section1-contents-3 {
 	font-size: 2rem;
 	color: white;
+}
+
+body .index-page-section-4 {
+	width: 100%;
+	height: auto;
 }
 
 body #testimonial {
@@ -7796,9 +7803,6 @@ body #login-reg .btn-link-1 {
 	width: 100%;
 	margin: 5px 0px;
 }
-}
-
-body #index-page-section-2 {
 }
 
 body #about-page-section-1{
