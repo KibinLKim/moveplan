@@ -62,16 +62,18 @@
 
     <section id="contact-page">
         <div class="container">
-            <div class="section-heading text-center">
-                <h2>______<span>퇴직관리 정보</span></h2>
-                <p class="subheading"></p>
-                <h3>당신의 퇴직일시금 수령액은?</h3>
-                <p class = "RetireCalculate"></p>
-                <h3>당신의 국민연금 수력액은?</h3>
-                <p class = "NationalPension"></p>
-                <h3>당신의 개인연금 수령액은?</h3>
-                <p class = "PrivacyPension"></p>    
-            </div>
+            {% for ExpectedRevenue in ExpectedRevenue.all %}
+                <div class="section-heading text-center">
+                    <h2>______<span>퇴직관리 정보</span></h2>
+                    <p class="subheading"></p>
+                    <h3>당신의 퇴직일시금 수령액은?</h3>
+                    <p class = "RetireCalculate">{{ExpectedRevenue.RetireExpected}}</p>
+                    <h3>당신의 국민연금 수력액은?</h3>
+                    <p class = "NationalPension"></p>
+                    <h3>당신의 개인연금 수령액은?</h3>
+                    <p class = "PrivacyPension"></p>    
+                </div>
+            {% endfor %}
         </div>
     </section>
 

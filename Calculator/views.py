@@ -1,9 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from hello.models import RetireCalculate, PrivacyPension
 
 
 
 def management(request):
-    return render(request,'management.html')
+  return render(request, 'management.html')
+
+def management_send(request):
+  if request.method == 'POST':
+      retire = RetireCalculate()
+      retire.YearPerformance = request.POST.get['YearPerformance','']
+      retire.ThreeMonthCost = request.POST.get['ThreeMonthCost','']
+      retire.YearAllowance = request.POST.get['YearAllowance','']
+      retire.WorkDays = request.POST.get['WorkDays','']
+      Revenue = (int(retire.ThreeMonthCost)+int(retire.YearPerformance)*3/12 + int(retire.YearAllowance)*3/12)
+      Revenue2 = Revenue/90*30*(int(retire.WorkDays)/365)
+      retire.RetireExpected = Revenue2
+      retire.save()
+      return redirect('management2')
 
 def management2(request):
     return render(request,'management2.html')
@@ -11,21 +25,21 @@ def management2(request):
 def management3(request):
     return render(request,'management3.html')
 
-def information1(request):
-    return render(request,'information1.html')
-
+def management3_send(request):
+    privacy = PrivacyPension()
+    privacy.PensionCategory = request.GET('PensionCategory')
+    privacy.PensionRateReturn = request.GET('PensionRateReturn')
+    privacy.MonthCompound = request.GET('MonthCompound')
+    privacy.save()
+    return redirect(request, 'information1')
 
 # Create your views here.
-def ExpectedRevenue(request):
-  ThreeMonthCost = request.GET['ThreeMonthCost']
-  YearPerformance = request.GET['YearPerformance']
-  YearAllowance = request.GET['YearAllowance']
-  Workdays = request.GET['Workdays']
-  if request.method == 'POST':   
-      Revenue = (ThreeMonthCost+YearPerformance*3/12 + YearAllowance*3/12)
-      Revenue2 = Revenue/90*30*(Workdays/365)
-      RetireExpected = Revenue2
-      return render(request, '',{'RetireExpected': RetireExpected})
+
+
+def information1(request):
+  ExpectedRevenue = RetireCalculate.objects
+  return render(request, 'information1.html', {'ExpectedRevenue':ExpectedRevenue})
+  
 
 def PrivacyPension(request):
   InvestmentPay = request.GET['InvestmentPay']

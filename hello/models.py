@@ -19,7 +19,7 @@ class RetireCalculate(models.Model):
 
 class PrivacyPension(models.Model):
     PensionCategory =(
-        ('P1','연금보험'),
+        ('p1','연금보험'),
         ('P2','변액연금보험'),
         ('P3','연금저축보험'),
     )
