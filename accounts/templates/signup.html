@@ -85,37 +85,44 @@
                             </div>
                         </div>
                         <div class="form-bottom">
-                            <form role="form" action="" class="login-form">
+                            <form method="POST" action="{% url 'signup' %}" class="login-form">
+                                {% csrf_token %}
                                 <div class="input-group form-group">
                                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1">
+                                    <input type="text" name ="username" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group form-group">
                                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
+                                    <input type="text" name ="userid" class="form-control" placeholder="Id" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group form-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                    <input type="password" name ="userpassword1" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group form-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                    <input type="password" name ="userpassword2" class="form-control" placeholder="Password Confirm" aria-describedby="basic-addon1">
+                                </div>         
+                                <!-- <div class="input-group form-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                                    <input type="text" name = 'useremail' class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                                </div> -->
+                                <div class="input-group form-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                                    <input type="number" name = 'threemonthcost' class="form-control" placeholder="평균 3개월 임금" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group form-group">
                                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                                    <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                                    <input type="number" name = 'yearperformance' class="form-control" placeholder="연간 상여금 총액" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-phone"></i></span>
-                                    <input type="tel" class="form-control" placeholder="Phone No." aria-describedby="basic-addon1">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                                    <input type="number" name = 'yearperallowance' class="form-control" placeholder="연차수당" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class=""></i></span>
-                                    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                                    <input type="number" name = 'workdays' class="form-control" placeholder="근속일수" aria-describedby="basic-addon1">
                                 </div>
-                                <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class=""></i></span>
-                                    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group form-group">
-
-                                    <textarea rows="4" cols="70" class="form-control" placeholder="Message"></textarea>
-
-                                </div>
-                        
                                 <button type="submit" class="btn">Sign me up!</button>
                             </form>
                         </div>

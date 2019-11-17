@@ -26,7 +26,7 @@ SECRET_KEY = '(d7ld7+x1tm@xw$5tj)r+93z)@zta*&2iukv7=v_+=90%tzw66'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+AUTH_USER_MODEL='accounts.MoveplanUser'
 
 # Application definition
 

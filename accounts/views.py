@@ -1,45 +1,38 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.contrib import auth
-
+from .models import MoveplanUser
 # Create your views here.
-#회원가입함수
-def signup(request):
-    if request.method == 'POST':
-        userId = request.POST['userId']
-        pworigin = request.POST['password']
-        passwordConfirm = request.POST['passwordConfirm']
-        if pworigin != passwordConfirm:
-            # return render(request,'signup.html',{"error":"비밀번호가 맞지 않습니다."})
-            try:#밑에 조건문을 실행을 시켜라 실행되면 하고 안되면 except문을 실행  시켜라
-                user = User.objects.get(username=request.POST['userId'])
-                return render(request, 'signup.html',{'error': 'Username has already been taken'})
-            except User.DoesNotExist:              
-                user = User.objects.create_user(userId,password=pworigin)
-                auth.login(request,user)
-                return redirect('index')
-        else:
-            return render(request,'signup.html',{'error': 'Passwords must match'})
-    else:
-        return render(request,'signup.html')
-    
 
+# 동구 버전 =====
 def login(request):
     if request.method == 'POST':
-        UserId = request.POST['userId']
-        Pworigin= request.POST['password']
-        user = auth.authenticate(request, username= userId, password=password)#authenticate 인증,있는지 없는지
-        if user is not None: #True,False None-데이터 있냐 없냐를 물어보는 것.
+        userid = request.POST['userid']
+        password = request.POST['userpassword']
+        user = auth.authenticate(request, username=userid, password=password)
+        if user is not None:
             auth.login(request, user)
             return redirect('index')
         else:
-            return render(request,'login.html',{'error':'username or password is incorrect'})
-    else:
+            return render(request, 'login.html')
+    else:    
         return render(request,'login.html')
 
+def signup(request):
+    if request.method == "POST":
+        if request.POST['userpassword1'] == request.POST['userpassword2']:
+            user = MoveplanUser.objects.create_user(request.POST['userid'], password=request.POST['userpassword1'])
+            userinfo = MoveplanUser() 
+            userinfo.ThreeMonthCost = int(request.POST.get('threemonthcost'))
+            userinfo.YearPerformance = int(request.POST.get('yearperformance'))
+            userinfo.YearAllowance = int(request.POST.get('yearperallowance'))
+            userinfo.WorkDays = int(request.POST.get('workdays'))
+            userinfo.save()
+            auth.login(request, user)
+            return redirect('index')
+    return render(request,'signup.html')
+
 def logout(request):
-    if request.method == 'POST':
-        auth.logout(request)
-        return redirect('index')
-    else:
-        return render(request,'index')
+    auth.logout(request)
+    return redirect('index')
+    
