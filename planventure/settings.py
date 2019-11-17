@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Calculator.apps.CalculatorConfig',
     'accounts.apps.AccountsConfig',
     'hello.apps.HelloConfig',
     'django.contrib.admin',

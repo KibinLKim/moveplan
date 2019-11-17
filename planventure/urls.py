@@ -19,6 +19,7 @@ from django.conf import settings
 
 import hello.views
 import accounts.views
+import Calculator.views
 
 
 urlpatterns = [
@@ -27,8 +28,9 @@ urlpatterns = [
     path('funding/', hello.views.funding, name='funding'),
     path('history/', hello.views.history, name='history'),
     path('', hello.views.index, name='index'),
-    path('management/', hello.views.management, name='management'),
-
+    path('management/', Calculator.views.management, name='management'),
+    path('management2/', Calculator.views.management2, name='management2'),
+    path('management3/', Calculator.views.management2, name='management3'),
     #userAccounts
 
     path('signup/',accounts.views.signup, name='signup'),

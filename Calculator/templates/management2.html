@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>회원가입</title>
+    <title>퇴직관리</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'scss/main.css' %}">
@@ -36,11 +36,11 @@
                     <div id="navbar" class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
                             <li><a href="{% url 'funding' %}">펀딩하기</a></li>
-                            <li><a href="{% url 'management' %}">퇴직관리</a></li>
+                            <li class="active"><a href="{% url 'management' %}">퇴직관리</a></li>
                             <li><a href="{% url 'history' %}">펀딩내역</a></li>
                             <li><a href="{% url 'about' %}">회사소개</a></li>
                             <li><a href="{% url 'login' %}">로그인</a></li>
-                            <li class="active"><a href="{% url 'signup' %}">회원가입</a></li>
+                            <li><a href="{% url 'signup' %}">회원가입</a></li>
                         </ul>
                     </div>
                     <!--/.nav-collapse -->
@@ -53,85 +53,66 @@
     <section id="top_banner">
         <div class="banner">
             <div class="inner text-center">
-                <h2>회원가입</h2>
+                <h2>Lorem ipsum dolor sit amet</h2>
+            </div>
+        </div>
+        <div class="page_info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-6">
+                        <h4>Contact</h4>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6" style="text-align:right;">Home<span class="sep"> / </span><span class="current">Contact</span></div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <section id="contact-page">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>국민연금 <span>확인을</span>위해</h2>
+                <p class="subheading"></p>
+            </div>
+            <div class="row contact-wrap">
+                <div class="status alert alert-success" style="display: none"></div>
+                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <div class="form-group">
+                            <label>가입기간 중 기준 소득월액의 평균액 *</label>
+                            <input type="text" name="name" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label>전체 가입월수 *</label>
+                            <input type="email" name="email" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label>연금수령 예정년도 *</label>
+                            <input type="number" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form=submit-group">
+                            <br>
+                            <h1>MOVEPLAN</h1><span>Move your plan</span></a>
+                            <br><br>
+                            <button type="submit" name="submit" class="btn btn-default submit-button">Submit Message <i class="fa fa-caret-right"></i></button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-
-
-    <section id="login-reg">
-        <div class="container">
-            <!-- Top content -->
-            <div class="row">
-                <div class="col-md-6 col-sm-12 forms-right-icons">
-                    <div class="section-heading">
-                        <h2>무브플랜에 <span>가입</span>하세요</h2>
-                        <p class="subheading">현재 무브플랜에는 연금상품가입, 퇴직관리, 펀딩내역 등의 다양한 서비스들을 제공하고자 준비 중에 있습니다.
-                        </p>
-                    </div>
-
-                </div>
-                <!--forms-right-icons-->
-                <div class="col-md-6 col-sm-12">
-                    <div class="form-box">
-                        <div class="form-top">
-                            <div class="form-top-left">
-                                <h3>Sign up now</h3>
-                                <p>Fill in the form below to get instant access</p>
-                            </div>
-                            <div class="form-top-right">
-                                <i class="fa fa-pencil"></i>
-                            </div>
-                        </div>
-                        <div class="form-bottom">
-                            <form role="form" action="" class="login-form">
-                                <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                                    <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-phone"></i></span>
-                                    <input type="tel" class="form-control" placeholder="Phone No." aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class=""></i></span>
-                                    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group form-group">
-                                    <span class="input-group-addon" id="basic-addon1"><i class=""></i></span>
-                                    <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group form-group">
-
-                                    <textarea rows="4" cols="70" class="form-control" placeholder="Message"></textarea>
-
-                                </div>
-                        
-                                <button type="submit" class="btn">Sign me up!</button>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-
-
-    </section>
-
-   
+    <!-- Start footer -->
     <section id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
+                        <br /><br />
                         <p>대표 : 정현욱</p>
                         <p>대표전화 : 010-6338-1363</p>
                         <p>이메일 : hyunwook0506@khu.ac.kr</p>
@@ -164,17 +145,17 @@
 
                 <div class="col-md-3 col-sm-3 col-xs-12 <block></block>">
                     <div class="footer-block">
-                        <h4>고객센터</h4>
+                        <h4>안내</h4>
                         <hr/>
                         <ul class="footer-links">
                             <li>
-                                <a href="#">대표 : 정현욱</a>
+                                <a href="#">공지사항</a>
                             </li>
                             <li>
-                                <a href="#">대표 전화 : 010-6338-1363</a>
+                                <a href="#">자주 묻는 질문</a>
                             </li>
                             <li>
-                                <a href="#">이메일: hyunwook0506@khu.ac.kr</a>
+                                <a href="#">공고</a>
                             </li>
                         </ul>
                     </div>
@@ -193,14 +174,12 @@
                     <a href="#">개인정보 처리방침</a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 copyright">
-                   <a href="#">©MOVEPLAN. All rights reserved.</a>
+                    <a href="#">©MOVEPLAN. All rights reserved.</a>
                 </div>
             </div>  
         </div>
     </section>
+    <!-- End footer -->
 
-</html>
-    
 </body>
-
 </html>
