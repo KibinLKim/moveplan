@@ -7855,3 +7855,12 @@ body #about-page-section-2 .about-page-section-2-2 {
 	font-size: 24px;
 	line-height: 40px;
 }
+
+.column1 {
+	color: black;
+	float: left;
+	width: 25%;
+	padding: 10px;
+	height: 60px;
+	text-align: center;
+}
