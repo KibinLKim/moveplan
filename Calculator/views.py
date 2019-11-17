@@ -53,20 +53,20 @@ def RetireSeason(request):
 
 
 
-# def NationalPension(request):
-#     Birthday1 = request.GET['Birthday1']
-#     FirstDate = request.GET['FirstDate']
-#     LastDate = int(Birthday1)+60
-#     ExpectedRaise = request.GET['ExpectedRaise']
-#     StartofMoney = FirstDate
-#     EndofMoney = '2019년 11월'
-#     MoneyDate = 2019
-#     MoneyRate = request.GET['MoneyRate']
-#     p1 = 
-#     p2 =
-#     p3 =
-#     p4 =
-#     if p >= 32*12:
-#     AllDate2 = request.GET['AllDate2']
-#     NationalPensionResult = [2019-(AllDate/12)
-#     return 
+def NationalPension(request):
+    Birthday1 = request.GET['Birthday1']
+    FirstDate = request.GET['FirstDate']
+    LastDate = int(Birthday1)+60
+    ExpectedRaise = request.GET['ExpectedRaise']
+    StartofMoney = FirstDate
+    EndofMoney = '2019년 11월'
+    MoneyDate = 2019
+    MoneyRate = request.GET['MoneyRate']
+    p1 = 
+    p2 =
+    p3 =
+    p4 =
+    if p >= 32*12:
+    AllDate2 = request.GET['AllDate2']
+    NationalPensionResult = [2019-(AllDate/12)
+    return 
