@@ -23,10 +23,10 @@ class PrivacyPension(models.Model):
         ('P2','변액연금보험'),
         ('P3','연금저축보험'),
     )
-    PensionCategoryChoices = models.CharField(max_length=60, choices = PensionCategory,default=0)
-    InvestmentPay = models.CharField(max_length = 100)
-    PensionRateReturn = models.CharField(max_length=100)
-    MonthCompound = models.CharField(max_length = 100)
+    InvestmentPay = models.IntegerField()
+    PensionRateReturn = models.IntegerField()
+    MonthCompound = models.IntegerField()
+    PrivacyExpected = models.CharField(max_length=255, default='example')
 
 
 class ShowPensionDC(models.Model):

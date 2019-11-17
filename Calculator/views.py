@@ -22,14 +22,20 @@ def management_send(request):
 def management2(request):
     return render(request,'management2.html')
 
+def management2_send(request):
+
+  return render(request, '')
+
 def management3(request):
     return render(request,'management3.html')
 
 def management3_send(request):
     privacy = PrivacyPension()
     privacy.PensionCategory = request.GET('PensionCategory')
+    privacy.InvestmentPay = request.GET('InvestmentPay')
     privacy.PensionRateReturn = request.GET('PensionRateReturn')
     privacy.MonthCompound = request.GET('MonthCompound')
+    privacy.PrivacyExpected = int(privacy.InvestmentPay)*int(privacy.PensionRateReturn)
     privacy.save()
     return redirect(request, 'information1')
 
@@ -38,15 +44,17 @@ def management3_send(request):
 
 def information1(request):
   ExpectedRevenue = RetireCalculate.objects
-  return render(request, 'information1.html', {'ExpectedRevenue':ExpectedRevenue})
+  # NationalRevenue = NationalRevenue.objects
+  PrivacyRevenue = PrivacyPension.objects
+  return render(request, 'information1.html', {'ExpectedRevenue':ExpectedRevenue,'PrivacyRevenue':PrivacyRevenue})
   
 
-def PrivacyPension(request):
-  InvestmentPay = request.GET['InvestmentPay']
-  PensionRateReturn = request.GET['PensionRateReturn']
-  MonthCompound = request.GET['MonthCompound']
-  PrivacyPensionResult = int(InvestmentPay)*int(PensionRateReturn)
-  return render(request, '', {'InvestmenPay':InvestmentPay, 'PensionRateReturn': PensionRateReturn,'MonthCompound':MonthCompound,'PrivacyPensionResult':PrivacyPensionResult})
+# def PrivacyPension(request):
+#   InvestmentPay = request.GET['InvestmentPay']
+#   PensionRateReturn = request.GET['PensionRateReturn']
+#   MonthCompound = request.GET['MonthCompound']
+#   PrivacyPensionResult = int(InvestmentPay)*int(PensionRateReturn)
+#   return render(request, '', {'InvestmenPay':InvestmentPay, 'PensionRateReturn': PensionRateReturn,'MonthCompound':MonthCompound,'PrivacyPensionResult':PrivacyPensionResult})
 
 
 def ChoicePension(request):

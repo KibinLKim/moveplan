@@ -67,13 +67,25 @@
                     <h2>______<span>퇴직관리 정보</span></h2>
                     <p class="subheading"></p>
                     <h3>당신의 퇴직일시금 수령액은?</h3>
-                    <p class = "RetireCalculate">{{ExpectedRevenue.RetireExpected}}</p>
+                    <h2 class = "RetireCalculate">{{ExpectedRevenue.RetireExpected}}원</h2>
+                    <p class="">이 자료는 3개월 급여총액:{{ExpectedRevenue.ThreeMonthCost}}(원)</p>
+                    <p class = "">연간 상여금 총액:{{ExpectedRevenue.YearPerformance}}(원) </p>
+                    <p class= "">연차수당 :{{ExpectedRevenue.YearAllowance}}(원)</p>
+                    <p class = "">재직일수 :{{ExpectedRevenue.WorkDays}}(일)를 토대로 작성되었습니다.</p>
+            {% endfor %}
+            {% for ExpectedRevenue in ExpectedRevenue.all %}        
                     <h3>당신의 국민연금 수력액은?</h3>
                     <p class = "NationalPension"></p>
-                    <h3>당신의 개인연금 수령액은?</h3>
-                    <p class = "PrivacyPension"></p>    
-                </div>
             {% endfor %}
+            {% for PrivacyRevenue in PrivacyRevenue.all %}  
+                    <h3>당신의 개인연금 수령액은?</h3>
+                    <h2 class = "PrivacyPension">{{PrivacyRevenue.PrivacyExpected}}원</h2>
+                    <p class = "PrivacyPension">현재 가입하고 계신 개인 연금 종류:{{PrivacyRevenue.PensionCategory}}</p>
+                    <p class ="">총 적립금:{{PrivacyRevenue.InvestmentPay}}(원)</p>
+                    <p class="">수익률:{{PrivacyRevenue.PensionRateReturn}}(%)</p>
+                    <p class = "">매월 적립금액:{{PrivacyRevenue.MonthCompound}}(원)을 토대로 작성되었습니다.</p>  
+            {% endfor %}
+                </div>
         </div>
     </section>
 
