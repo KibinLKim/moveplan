@@ -68,11 +68,12 @@
             </div>
             <div class="row contact-wrap">
                 <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form",class="contact-form" name="contact-form" action="{% url 'management3_send' %}">
+                <form method="POST" id="main-contact-form" class="contact-form" name="contact-form" action="{% url 'management3_send' %}">
+                    {% csrf_token %}
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
                             <label>개인연금 종류를 택해주세요 *</label>
-                            <select name='PensionCategory' form="dog_form",class="form-control", required="required">
+                            <select name='PensionChoice' class="form-control", required="required">
                                     <option value="연금보험">연금보험</option>
                                     <option value="변액연금보험">변액연금보험</option>
                                     <option value="연금저축보험">연금저축보험</option>
@@ -80,15 +81,15 @@
                         </div>
                         <div class="form-group">
                                 <label>총 적립금을 입력해주세요 *</label>
-                                <input type="number" name="InvestmentPay" class="form-control" required="required">
+                                <input type="number" name="InvestmentPay" class="form-control" ,required="required">
                             </div>
                         <div class="form-group">
                             <label>수익률을 입력해주세요 *</label>
-                            <input type="number" name="PensionRateReturn" class="form-control" required="required">
+                            <input type="number" name="PensionRateReturn" class="form-control" ,required="required">
                         </div>
                         <div class="form-group">
                             <label>매월 적립금액을 입력해주세요*</label>
-                            <input type="number", name = "MonthCompound" class="form-control">
+                            <input type="number" name = "MonthCompound" class="form-control",required="required">
                         </div>
                     </div>
                     <div class="col-sm-5">

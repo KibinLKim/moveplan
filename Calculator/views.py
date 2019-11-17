@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from hello.models import RetireCalculate, PrivacyPension
+from pip._internal import req
 
 
 
@@ -7,14 +8,17 @@ def management(request):
   return render(request, 'management.html')
 
 def management_send(request):
-  if request.method == 'POST':
+   if request.method == 'POST':
       retire = RetireCalculate()
-      retire.YearPerformance = request.POST.get['YearPerformance','']
-      retire.ThreeMonthCost = request.POST.get['ThreeMonthCost','']
-      retire.YearAllowance = request.POST.get['YearAllowance','']
-      retire.WorkDays = request.POST.get['WorkDays','']
-      Revenue = (int(retire.ThreeMonthCost)+int(retire.YearPerformance)*3/12 + int(retire.YearAllowance)*3/12)
-      Revenue2 = Revenue/90*30*(int(retire.WorkDays)/365)
+      retire.YearPerformance = int(request.POST.get('YearPerformance'))
+      retire.ThreeMonthCost = request.POST.get('ThreeMonthCost')
+      retire.ThreeMonthCost = int(retire.ThreeMonthCost)
+      retire.YearAllowance = request.POST.get('YearAllowance')
+      retire.YearAllowance = int(retire.YearAllowance)
+      retire.WorkDays = request.POST.get('WorkDays')
+      retire.WorkDays = int(retire.WorkDays)
+      Revenue = retire.ThreeMonthCost+retire.YearPerformance*(3/12) + retire.YearAllowance*(3/12)
+      Revenue2 = Revenue/90*30*(retire.WorkDays/365)
       retire.RetireExpected = Revenue2
       retire.save()
       return redirect('management2')
@@ -29,15 +33,20 @@ def management2_send(request):
 def management3(request):
     return render(request,'management3.html')
 
+
 def management3_send(request):
+  if request.method == 'POST':
     privacy = PrivacyPension()
-    privacy.PensionCategory = request.GET('PensionCategory')
-    privacy.InvestmentPay = request.GET('InvestmentPay')
-    privacy.PensionRateReturn = request.GET('PensionRateReturn')
-    privacy.MonthCompound = request.GET('MonthCompound')
-    privacy.PrivacyExpected = int(privacy.InvestmentPay)*int(privacy.PensionRateReturn)
+    privacy.PensionChoice = str(request.POST.get('PensionChoice'))
+    privacy.InvestmentPay = int(request.POST.get('InvestmentPay'))
+    privacy.PensionRateReturn = int(request.POST.get('PensionRateReturn'))
+    privacy.MonthCompound = int(request.POST.get('MonthCompound'))
+    privacy.PrivacyExpected = privacy.InvestmentPay*privacy.PensionRateReturn
     privacy.save()
-    return redirect(request, 'information1')
+    return redirect('information1')
+  else:
+    return render(request, 'index.html')
+
 
 # Create your views here.
 
