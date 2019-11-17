@@ -31,8 +31,9 @@ urlpatterns = [
     path('', hello.views.index, name='index'),
     path('management/', Calculator.views.management, name='management'),
     path('management2/', Calculator.views.management2, name='management2'),
-    path('management3/', Calculator.views.management2, name='management3'),
+    path('management3/', Calculator.views.management3, name='management3'),
     #userAccounts
+    path('information1/',Calculator.views.information1,name= 'information1'),
 
     path('signup/', accounts.views.signup, name='signup'),
     path('login/', accounts.views.login, name='login'),
