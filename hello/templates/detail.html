@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
    
-    <style>
+    <!-- <style>
         table {
             width: 100%;
             border: 1px solid black;
@@ -16,9 +16,8 @@
             padding: 10px;
             color: black;
         }
-    </style>
+    </style> -->
 
-</head>
 {% block content %}
 <body id="wrapper">
 
@@ -40,23 +39,23 @@
                             <div class="portfolio-content">
                                 <p class="detail-page-section-1-1">연 수익률</p>
                                 <p class="detail-page-section-1-2">14.71%</p><br />
-                                <table>
+                                <table style="width: 100%; border: 1px solid black; border-collapse: collapse; color: black; text-align: center;">
                                     <tbody>
                                         <tr>
-                                            <td>가입기간 : 20년</td>
+                                            <td style="border: 1px solid black; padding: 10px; color: black;">가입기간 : 20년</td>
                                         </tr>
                                         <tr>
-                                            <td>등급 : A</td>
+                                            <td style="border: 1px solid black; padding: 10px; color: black;">등급 : A</td>
                                         </tr>
                                         <tr>
-                                            <td>현재 모인 금액 : 7억원</td>
+                                            <td style="border: 1px solid black; padding: 10px; color: black;">현재 모인 금액 : 7억원</td>
                                         </tr>
                                         <tr>
-                                            <td>최소 모집 금액 : 10억원</td>
+                                            <td style="border: 1px solid black; padding: 10px; color: black;">최소 모집 금액 : 10억원</td>
                                         </tr>
                                     </tbody>
                                 </table><br />
-                                <a href="#" class="btn btn-primary btn-detail">투자하기</a>
+                                <a href="{% url 'success' %}" class="btn btn-primary btn-detail">투자하기</a>
                             </div>
                         </div>
                         <!-- End portfolio-item -->

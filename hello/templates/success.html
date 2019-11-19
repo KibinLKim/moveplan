@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+{% block content %}
+<body>
+
+    <div class="jumbotron text-center" style="margin-bottom: -10px;">
+        <div class="row">
+            <div class="col-xs-4 col-sm-6 col-md-6 col-lg-12">
+                <br /><br />
+                <h1 style="color: black;"><strong>투자가 완료되었습니다!</strong></h1><br />
+                <p><strong>Please check your email</strong> for further instructions.</p>
+                <hr>
+                <p>Having trouble? Contact us</p><br />
+                <a class="btn btn-primary btn-sm" style="background-color: #159eee" href="{% url 'history' %}" role="button">펀딩내역 보기</a>
+                </p><br /><br />
+            </div>
+        </div>
+    </div>
+    <!-- Start footer -->
+
+{% endblock %}

@@ -28,6 +28,7 @@ urlpatterns = [
     path('detail/', hello.views.detail, name='detail'),
     path('funding/', hello.views.funding, name='funding'),
     path('history/', hello.views.history, name='history'),
+    path('success/', hello.views.success, name='success'),
     path('', hello.views.index, name='index'),
     path('management/', Calculator.views.management, name='management'),
     path('management_send/',Calculator.views.management_send,name="management_send"),
