@@ -2,21 +2,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
-   
-    <!-- <style>
-        table {
-            width: 100%;
-            border: 1px solid black;
-            border-collapse: collapse;
-            color: black;
-            text-align: center;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            color: black;
-        }
-    </style> -->
 
 {% block content %}
 <body id="wrapper">
@@ -28,16 +13,16 @@
                     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 portfolio-item">
                         <div class="portfolio-one">
                             <div class="portfolio-head">
-                                <div class="detail-img"><img src="{% static './img/detail/1.png' %}"></div>
+                                <div class="detail-img text-center"><img src="{% static './img/detail/1.png' %}"><br />458,417 원 / 5% 적용중 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;참여자가 많을수록 조건이 달라집니다.</div>
                             </div>
-                            <!-- End portfolio-head -->
+                            <img src="{% static './img/detail/bar.png' %}">
                         </div>
                         <!-- End portfolio-item -->
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
                         <div class="portfolio-one">
                             <div class="portfolio-content">
-                                <p class="detail-page-section-1-1">연 수익률</p>
+                                <p class="detail-page-section-1-1"><br />연 수익률</p>
                                 <p class="detail-page-section-1-2">14.71%</p><br />
                                 <table style="width: 100%; border: 1px solid black; border-collapse: collapse; color: black; text-align: center;">
                                     <tbody>
@@ -55,7 +40,7 @@
                                         </tr>
                                     </tbody>
                                 </table><br />
-                                <a href="{% url 'success' %}" class="btn btn-primary btn-detail">투자하기</a>
+                                <a href="{% url 'success' %}" class="btn btn-primary btn-detail" style="margin-bottom: 8px;">투자하기</a>
                             </div>
                         </div>
                         <!-- End portfolio-item -->
@@ -63,6 +48,84 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 portfolio-item">
+                        <div class="portfolio-one">
+                            <div class="portfolio-content" style="margin-left: 20px;">
+                                <table cellspacing="0" summary="상품유형, 순자산, 벤치마크 등의 항목으로 구성된 모펀드 상세정보입니다." class="row">
+                                    <colgroup><col width="15%" /><col width="35%" /><col width="15%" /><col width="35%" /></colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" title="투자지역">투자지역</th>
+                                            <td class="rline">해외</td>
+                                            <th scope="row" title="투자대상자산의 비중에 따른 분류로&#10;주식형, 채권형, 혼합형으로 나누어집니다.">상품유형</th>
+                                            <td>주식혼합형 <span style="color:#ffffff;"> 2X41 </span> </td>
+                                        </tr>
+                            
+                                        <tr>
+                                            <th scope="row" title="	펀드가 운용되는 총금액에서 부채등을 차감한&#10;실제로 순수하게 운용되는 펀드의 가치를 반영한&#10;펀드의 실제 운용액입니다.">순자산(억)</th>
+                                            <td class="rline">188 (각 Class 순자산의 합계)</td>
+                                            <th scope="row" title="펀드의 수익률을 비교하는 '기준 수익률'로&#10;투자성과를 비교하기 위한 비교지수 입니다.">벤치마크</th>
+                                            <td></td>
+                                        </tr>
+                            
+                                        <tr>
+                                            <th scope="row" title="기준가의 금액이 확정되는 날짜를 말합니다.&#10;펀드의 종류 및 환매청구 시점에 따라&#10;환매에 적용되는 기준가격과 환매대금 지급일이&#10;다소 달라집니다.">환매기준일</th>
+                                            <td colspan="3">17시&nbsp;이전&nbsp;04영업일&nbsp;기준가격으로&nbsp;08영업일&nbsp;환매&nbsp;/&nbsp;17시&nbsp;경과후&nbsp;05영업일&nbsp;기준가격으로&nbsp;09영업일&nbsp;환매</td>
+                                        </tr>
+                            
+                                        <tr>
+                                            <th scope="row" title="운용부서">운용부서</th>
+                                            <td colspan="3">글로벌운용본부</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-one">
+                                
+                            <div class="portfolio-content" style="margin-left: 20px;">
+                                    <h4 style="margin-left: -20px;">Class A</h4><br />
+                                    <table cellspacing="0" class="row">
+                                    <colgroup><col width="15%" /><col width="35%" /><col width="15%" /><col width="35%" /></colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">클래스안내</th>
+                                        <td colspan="3">수수료선취-오프라인</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row" title="펀드를 본격적으로 운용하기 시작한 날짜 입니다.">설정일</th>
+                                        <td class="rline">2017-07-26</td>
+                                        <th scope="row" title="펀드가 운용되는 총금액에서 부채등을 차감한&#10;Class 펀드의 실제 운용액 입니다.">순자산(억원)</th>
+                                        <td>29</td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <th scope="row" title="펀드를 사고 팔때 기준이 되는 가격입니다.">기준가격</th>
+                                        <td class="rline">1,083.05 / 2019-11-19 &nbsp;&nbsp;</td>
+                                        <th scope="row" title="위탁자 및 수탁자에게 신탁업무수행의 대가로서&#10;신탁재산에서 지불되는 보수 입니다.">보수(年)</th>
+                                        <td>총 0.985%  (운용 0.32%, 판매 0.62%, 기타 0.045%)</td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <th scope="row" title="은행, 증권사 등 펀드판매사들이 펀드를 판매할 때&#10;위험 설명 등을 해주는 대가로 원금에 대해&#10;먼저 수취하는 수수료 입니다.">선취판매수수료</th>
+                                        <td colspan="3">납입금액의 0.70% 이내</td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <th scope="row" title="운용의 안정성과 투자자간의 형평성 유지를 위해&#10;펀드 가입 후 일정기간 이내에 환매할 경우 부과되는&#10;수수료 입니다. ">환매수수료</th>
+                                        <td colspan="3">해당사항 없음</td>
+                                    </tr>
+                    
+                                    <tr>
+                                        <th scope="row" title="판매회사">판매회사</th>
+                                        <td colspan="3">국민은행, 대구은행, 부산은행, 한국스탠다드차타드은행, 한국씨티은행, KB증권</td>
+                                    </tr>
+                                    </tbody>
+                                </table>                    
+                            </div>
+                        </div>
+
                         <div class="portfolio-one">
                             <div class="portfolio-content">
                                 <h4 class="title"><b>펀드가입시 유의사항</b></h4><br />
