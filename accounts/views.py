@@ -18,19 +18,21 @@ def login(request):
     else:    
         return render(request,'login.html')
 
+
+
 def signup(request):
     if request.method == "POST":
         if request.POST['userpassword1'] == request.POST['userpassword2']:
             user = MoveplanUser.objects.create_user(request.POST['userid'], password=request.POST['userpassword1'])
-            userinfo = MoveplanUser() 
-            userinfo.ThreeMonthCost = int(request.POST.get('threemonthcost'))
-            userinfo.YearPerformance = int(request.POST.get('yearperformance'))
-            userinfo.YearAllowance = int(request.POST.get('yearperallowance'))
-            userinfo.WorkDays = int(request.POST.get('workdays'))
-            userinfo.save()
+            user.ThreeMonthCost = int(request.POST.get('threemonthcost'))
+            user.YearPerformance = int(request.POST.get('yearperformance'))
+            user.YearAllowance = int(request.POST.get('yearperallowance'))
+            user.WorkDays = int(request.POST.get('workdays'))
+            user.save()
             auth.login(request, user)
             return redirect('index')
     return render(request,'signup.html')
+
 
 def logout(request):
     auth.logout(request)
