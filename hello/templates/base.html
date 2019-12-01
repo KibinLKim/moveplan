@@ -41,20 +41,17 @@
                             {% if user.is_active %}
                                 <li><a href="{% url 'history' %}">펀딩내역</a></li>
                             {% else %}
-                                
                             {% endif %}
                             
                             <li><a href="{% url 'about' %}">회사소개</a></li>
                             <!-- 로그인, 로그아웃에 따른 배너 변경-->
                             {% if user.is_active %}
-                                <li><a href="{%url 'history' %}"> <span class=""></span> {{user.username}}</a></li>
+                                <li><a href="{%url 'history' %}">{{user.username}} 님</a></li>
                                 <li><a href="{%url 'logout' %}">로그아웃</a></li>
                             {% else %}
-                                <li><a href="{%url 'login' %}"> <span class=""></span>로그인</a></li>
+                                <li><a href="{%url 'login' %}">로그인</a></li>
                                 <li><a href="{% url 'signup' %}">회원가입</a></li>
                             {% endif %}
-                            <!-- <li><a href="{% url 'login' %}">로그인</a></li>
-                            <li><a href="{% url 'signup' %}">회원가입</a></li> -->
                         </ul>
                     </div>
                     <!--/.nav-collapse -->

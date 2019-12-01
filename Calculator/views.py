@@ -68,7 +68,7 @@ def information1(request):
 
 def ChoicePension(request):
   WantYear = request.GET['WantYear']
-  RetireExpected = request.GET['RetireExpected']
+  RetireExpected = int(request.GET['RetireExpected'])
   MonthPayment = int(WantYear)*int(RetireExpected)*0.017/int(WantYear)/12
   return render(request, '',{'WantYear':WantYear, 'RetureExpected':RetireExpected, 'MonthPayment':MonthPayment})
 
